@@ -1,0 +1,8 @@
+exporters:
+  telegraf:
+    device_ip: 10.0.0.13
+    conn_addr: 10.5.1.61:8093
+    conn_timeout: 1s
+    send_interval: 5s
+  pcap:
+    file_name: /tmp/dropwatch.pcap
