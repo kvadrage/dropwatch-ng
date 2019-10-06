@@ -1,0 +1,13 @@
+[Unit]
+Description=dropwatch-ng packet drop monitoring service
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/dropwatch-ng -c /etc/dropwatch/dropwatch.yml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
